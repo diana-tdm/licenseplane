@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Licenseplane</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <form class="form" name="licenseplane" action="#" method="get">
+      <div class="element">
+        <div class="line">
+          <label><input type="radio" name="licenseplane" value="licenseplane#1" /> license plane #1 </label>
+          <span class="price">$13 per license</span>
+        </div>
+        <div class="line">
+          <label><input type="radio" name="licenseplane" value="licenseplane#2" /> license plane #2</label>
+          <span class="price">$22 per license</span>
+        </div>
+        <div class="line selected">
+          <label><input type="radio" name="licenseplane" value="licenseplane#3" checked="checked" /> license plane
+            #3</label> <span class="price">$34 per license</span>
+        </div>
+      </div>
+      <div class="number">
+        <p>Number of licenses:</p>
+        <div class="number_select">
+          <select>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option selected>10</option>
+          </select>
+        </div>
+      </div>
+      <div class="total">
+        <div class="total_item">
+          <p>total:</p>
+          <p class="total_price">$340</p>
+          <p class="total_price"><sup>us</sup></p>
+        </div>
+        <button class="total_btn" type="submit">buy now</button>
+        <p class="total_plan">Selected plan: #3</p>
+      </div>
+    </form>
+  </body>

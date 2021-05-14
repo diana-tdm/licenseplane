@@ -1,0 +1,225 @@
+/* latin-ext */
+@font-face {
+  font-family: "Bebas Neue";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/JTUSjIg69CK48gW7PXoo9Wdhyzbi.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "Bebas Neue";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/JTUSjIg69CK48gW7PXoo9Wlhyw.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+/* cyrillic-ext */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/KFOmCnqEu92Fr1Mu72xKOzY.woff2) format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/KFOmCnqEu92Fr1Mu5mxKOzY.woff2) format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+  padding: 0 100px;
+}
+
+.form {
+  width: 350px;
+  height: auto;
+  background-color: #f8f8f8;
+  border: 6px solid #ebebeb;
+  padding: 20px 10px 10px 10px;
+}
+
+.element {
+  display: flex;
+  flex-direction: column;
+  font-family: "Bebas Neue", cursive;
+  color: #787878;
+  padding-bottom: 7px;
+}
+
+.line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+}
+
+.line.selected {
+  border-top: 1px solid #b8d7e2;
+  border-bottom: 1px solid #b8d7e2;
+  background-color: #ebf4f7;
+}
+
+label {
+  display: flex;
+  align-items: center;
+}
+
+.price {
+  font-family: "Roboto", sans-serif;
+  font-size: 10px;
+}
+
+input[type="radio"] {
+  position: relative;
+  width: 0;
+  margin: 0 28px 0 0;
+  height: 18px;
+  transform: translate(0px, -2px);
+}
+
+input[type="radio"]::after {
+  position: absolute;
+  content: "";
+  width: 18px;
+  height: 18px;
+  border: 3px solid grey;
+  border-radius: 50%;
+}
+
+input[type="radio"]:checked::after {
+  border: 2px solid #34648e;
+}
+
+input[type="radio"]:checked::before {
+  position: absolute;
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: #0294bf;
+  border-radius: 50%;
+  top: 5px;
+  left: 5px;
+}
+
+.number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #cecece;
+  border-bottom: 1px solid #cecece;
+  padding: 10px 10px 10px;
+  margin-bottom: 15px;
+}
+
+.number_select {
+  position: relative;
+  height: 20px;
+  margin-left: 5px;
+}
+
+.number_select select {
+  display: block;
+  padding: 2px 20px 2px 1px;
+  height: 100%;
+  background: none;
+  border: 1px solid #0294bf;
+  border-radius: 3px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 10px;
+  color: #444;
+}
+
+.number_select::after {
+  content: "";
+  display: block;
+  border-style: solid;
+  border-width: 4px 3px 0 3px;
+  border-color: #000 transparent transparent transparent;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  right: 3px;
+  z-index: 1;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-size: 10px;
+}
+
+.total {
+  display: flex;
+  flex-direction: column;
+}
+
+.total_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 115px;
+  color: #787878;
+}
+
+.total p {
+  font-family: "Bebas Neue", cursive;
+  font-size: 20px;
+  margin: 0;
+}
+
+sub {
+  font-family: "Bebas Neue", cursive;
+  font-size: 20px;
+}
+
+.total_price {
+  color: #0294bf;
+}
+
+.total_btn {
+  font-family: "Roboto", sans-serif;
+  font-size: 10px;
+  text-transform: uppercase;
+  padding: 10px 10px;
+  background: #33a845;
+  border-radius: 50px;
+  color: #fff;
+  margin: 0 100px;
+  text-align: center;
+  border: none;
+}
+
+p.total_plan {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  text-align: center;
+  color: #0294bf;
+  margin: 25px 0 15px;
+}
